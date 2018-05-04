@@ -55,7 +55,7 @@ xzcat $UBOOT_PKG_FN | tar xvf - --strip-components=3 --warning=no-unknown-keywor
 #
 
 cd $NB_SRC_DIR/obj/releasedir/$T_MACH/binary
-gzcat gzimg/$T_GZIMG > $TARGET_IMG
+zcat gzimg/$T_GZIMG > $TARGET_IMG
 
 dd if=$NB_SRC_DIR/$UBOOT_DIR/$UBOOT_IMG of=$TARGET_IMG bs=1k seek=8 conv=sync
 
